@@ -1,0 +1,2 @@
+# Hatoribot
+Excepciónal
