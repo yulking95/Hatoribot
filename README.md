@@ -22,7 +22,7 @@ Comandos para instalar:
 
 * `git clone https://github.com/yulking95/Hatoribot `
 
-* `cd Bot `
+* `cd Hatoribot `
 
 * `bash install.sh `
 
