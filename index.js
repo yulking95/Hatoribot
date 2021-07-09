@@ -1427,7 +1427,7 @@ $(document).ready(function() {
                 await limitAdd(sender) 
                 break 
 				case 'play2':
-                reply('⚡ HH-BOT⚡ Esta buscando ')
+                reply(mess.wait)
                 teext = body.slice(6)
                 anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/yt/play2?query=${teext}`)
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1435,10 +1435,190 @@ $(document).ready(function() {
                 teks = `Nombre de la musica: ${text}\nTitulo: ${anu.result.title}\ndescripcion del video: ${anu.result.description}\nurl: ${anu.result.url}\nPublicado en: ${anu.result.publishDate}\n\nAGUARDE, ENVIANDO ÁUDIO...`
                 client.sendMessage(from, teks)
                 client.sendMessage(from, buffer, image)
-                client.sendMessage(from, tabu, audio, {mimetype: 'audio/mp4', filename: `${anu.result.url_audio}.mp3`, quoted: mek})
+                client.sendMessage(from, tabu, sticker, {mimetype: 'audio/mp4', filename: `${anu.result.url_audio}.mp3`, quoted: mek})
                 break
-					case 'play3':   
-				  if (args.length === 0) return reply(`Ejemplo: *${prefix}play* _El título de la musica para buscar_`)
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	    				
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	                 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+					
+case 'play':
+                reply(mess.wait)
+
+                play = body.slice(5)
+
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=${ZeksApi}`)
+
+               if (anu.error) return reply(anu.error)
+
+                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO SPAMES CSM*`
+
+                buffer = await getBuffer(anu.result.thumbnail)
+
+                lagu = await getBuffer(anu.result.url_audio)
+
+                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+
+                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
+
+                break
+
+/*case 'play3':   
+			
+			if (args.length === 0) return reply(`Ejemplo: *${prefix}play* _El título de la musica para buscar_`)
             var srch = args.join('')
     		aramas = await yts(srch);
     		aramat = aramas.all 
@@ -1458,7 +1638,7 @@ $(document).ready(function() {
                         } catch (err) {
                         reply(mess.error.api)
                         }
-                   break  
+                   break*/
 				case 'yt2mp4':
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
                                         if (!isGroupAdmins) return reply(mess.only.admin)
@@ -2144,7 +2324,7 @@ $(document).ready(function() {
 
 	
 
-				case 'qrcode':
+				case 'qr':
 
                 buff = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?data=${body.slice(8)}&size=1080%C3%971080`)
 
@@ -2273,7 +2453,7 @@ $(document).ready(function() {
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
-           case 'playmp3':
+           case 'play4:
                 reply(mess.wait)
                 play = body.slice(9)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=${ZeksApi}`, {method: 'get'})
@@ -2468,48 +2648,48 @@ case 'fdp':
 tujuh = fs.readFileSync('./assets/fdp.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat1':
-tujuh = fs.readFileSync('./assets/beat1.mp3');
+case 'op1':
+tujuh = fs.readFileSync('./assets/op1.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat2':
-tujuh = fs.readFileSync('./assets/beatdois.mp3');
+case 'op2':
+tujuh = fs.readFileSync('./assets/op2.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat3':
-tujuh = fs.readFileSync('./assets/beatt.mp3');
+case 'op3':
+tujuh = fs.readFileSync('./assets/op3.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat4':
-tujuh = fs.readFileSync('./assets/beatq.mp3');
+case 'op4':
+tujuh = fs.readFileSync('./assets/op4.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat5':
-tujuh = fs.readFileSync('./assets/beatc.mp3');
+case 'op5':
+tujuh = fs.readFileSync('./assets/op5.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat6':
-tujuh = fs.readFileSync('./assets/beats.mp3');
+case 'op6':
+tujuh = fs.readFileSync('./assets/op6.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat7':
-tujuh = fs.readFileSync('./assets/beatsete.mp3');
+case 'op7':
+tujuh = fs.readFileSync('./assets/op7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat8':
-tujuh = fs.readFileSync('./assets/beato.mp3');
+case 'op8':
+tujuh = fs.readFileSync('./assets/op8.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'beat9':
-tujuh = fs.readFileSync('./assets/beatn.m4a');
+case 'op9':
+tujuh = fs.readFileSync('./assets/op9.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'meliodas':
 tujuh = fs.readFileSync('./assets/edit.mp4');
 client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
 break
-case 'beat10':
-tujuh = fs.readFileSync('./assets/beatd.mp3');
+case 'op10':
+tujuh = fs.readFileSync('./assets/op10.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'beat11':
@@ -3686,11 +3866,11 @@ case 'listonline':
                 case 'irii':
 			client.sendPtt(from, './lindy/iri2.mp3', id)
 			break
-                case 'play':   
+                /*case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
 		 /*if (!isUser) return reply(mess.only.daftarB)*/
                
-		if (!isGroup) return reply(mess.only.group)
+		/*if (!isGroup) return reply(mess.only.group)
 		reply(mess.only.musica)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
@@ -3700,8 +3880,8 @@ case 'listonline':
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-                break
-                 case 'play2':
+                break*/
+                 case 'play1':
                 if (args.length < 1) return reply('Donde esta el nombre de la canción?')
                 if (!isGroup) return reply(mess.only.group)
                 reply(mess.wait)
