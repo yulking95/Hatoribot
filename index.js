@@ -1435,7 +1435,7 @@ $(document).ready(function() {
                 teks = `Nombre de la musica: ${text}\nTitulo: ${anu.result.title}\ndescripcion del video: ${anu.result.description}\nurl: ${anu.result.url}\nPublicado en: ${anu.result.publishDate}\n\nAGUARDE, ENVIANDO ÁUDIO...`
                 client.sendMessage(from, teks)
                 client.sendMessage(from, buffer, image)
-                client.sendMessage(from, tabu, sticker, {mimetype: 'audio/mp4', filename: `${anu.result.url_audio}.mp3`, quoted: mek})
+                client.sendMessage(from, tabu, image, {mimetype: 'audio/mp4', filename: `${anu.result.url_audio}.mp3`, quoted: mek})
                 break
 	
 
@@ -1600,7 +1600,7 @@ case 'play':
 
                 play = body.slice(5)
 
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=${ZeksApi}`)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=tshanduyx`)
 
                if (anu.error) return reply(anu.error)
 
@@ -3866,22 +3866,22 @@ case 'listonline':
                 case 'irii':
 			client.sendPtt(from, './lindy/iri2.mp3', id)
 			break
-                /*case 'play':   
+                case 'play1':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
 		 /*if (!isUser) return reply(mess.only.daftarB)*/
                
-		/*if (!isGroup) return reply(mess.only.group)
+		if (!isGroup) return reply(mess.only.group)
 		reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy89`)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título* : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO SPAMES 😠*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-                break*/
-                 case 'play1':
+                break
+                 case 'play0':
                 if (args.length < 1) return reply('Donde esta el nombre de la canción?')
                 if (!isGroup) return reply(mess.only.group)
                 reply(mess.wait)
