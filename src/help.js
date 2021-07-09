@@ -58,7 +58,9 @@ const help = (prefix, sender, pushname, time) => {
 ┣⊱  **setfoto*         
 ┣⊱  **grupoinfo*       
 ┣⊱  **ytmp4* 
-┣⊱. **play*
+┣⊱  **play*
+┣⊱  **play1*
+┣⊱  **play2*
 ┣⊱  **buendia*          
 ┣⊱  **buenasnoches*                              
 ╰────────────────
@@ -145,6 +147,16 @@ const help = (prefix, sender, pushname, time) => {
 ┣⊱  **rap1*                       
 ┣⊱  **rap2*                       
 ┣⊱  **rap3* 
+┣⊱  **op1*
+┣⊱  **op2*
+┣⊱  **op3*
+┣⊱  **op4*
+┣⊱  **op5*
+┣⊱  **op6*
+┣⊱  **op7*
+┣⊱  **op8*
+┣⊱  **op9*
+┣⊱  **op10*
 │                                 
 ╰──────────────────
 ╭──────「 OTROS/2 」──╮
